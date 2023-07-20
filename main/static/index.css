@@ -1,3 +1,4 @@
+
 h1 {
     margin-top: 340px;
     margin-left: 30px;
@@ -11,4 +12,5 @@ h1 {
 .horaires {
     margin-top: 100px;
     margin-left: 60px;
+    font-weight: bolder;
 }
