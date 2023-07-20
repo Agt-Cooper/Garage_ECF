@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'index.css' %}"> 
+{% endblock head %}
+
+{% block title %}Index{% endblock title %}
+
+{% block content %}
+<h1> Bienvenue au Garage V.Parrot !</h1>
+<div class="description">
+    <p>Vous pouvez retrouver notre catalogue de voitures disponibles en ligne.</p>
+    <p>Le site est en construction, vous retrouverez bientôt plus de choix ainsi que nos services.</p>
+    <p>Merci pour votre patience !</p>
+    <p>En attendant, vous pouvez passer nous voir au garage pendant nos heures d'ouverture, on vous attend.</p>
+</div>
+<div class="horaires">
+    <p>lun.: 08h45 - 12h00 / 14h00 - 18h00</p>
+    <p>mar.: 08h45 - 12h00 / 14h00 - 18h00</p>
+    <p>mer.: 08h45 - 12h00 / 14h00 - 18h00</p>
+    <p>jeu.: 08h45 - 12h00 / 14h00 - 18h00</p>
+    <p>ven.: 08h45 - 12h00 / 14h00 - 18h00</p>
+    <p>sam.: 08h45 - 12h00</p>
+    <p>dim.: Fermé</p>
+</div>
+{% endblock content %}
+
+{% block javascript %}{% endblock javascript %}

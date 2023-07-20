@@ -1,0 +1,69 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+
+}
+
+a.navbar-brand{
+  color: white!important;
+  font-size: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+}
+
+.navbar .nav-item .nav-link,
+.dropdown-menu .dropdown-item {
+  font-size: 20px;
+  font-family: roboco;
+  color: rgba(255, 255, 255, 0.644);
+}
+
+.navbar .nav-item .nav-link:hover,
+.dropdown-menu .dropdown-item:hover,
+.navbar .nav-item .nav-link.active,
+.dropdown .dropdown-menu .dropdown-item.active {
+  color: #ffffff; 
+  background-color:#1c326b;
+}
+
+.navbar .nav-item .nav-link:hover,
+.dropdown-menu .dropdown-item:hover,
+.navbar .nav-item .nav-link.active,
+.dropdown .dropdown-menu .dropdown-item.active::after{
+ text-decoration: underline #ce1919;
+ bottom: -10px;
+}
+
+.navbar button {
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+.navbar {		
+  background: #0b1a42;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 2px solid rgb(0, 0, 0);    
+}
+
+#navbarDropdown{
+  color: rgba(255, 255, 255, 0.644);  
+  font-size: 22px;
+}
+
+#navbar{
+  background: #0b1a42;
+}
+footer {
+  box-sizing: border-box;
+  font-size: 10px;
+  margin-top: 50px;
+  display: flex;
+  bottom: 0%;
+  justify-content: center;
+  padding: 5px;
+  background-color: #0b1a42;
+  color: #fff;
+}

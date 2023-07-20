@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'catalogue.css' %}"> 
+{% endblock head %}
+
+{% block title %}Catalogue{% endblock title %}
+
+{% block content %}
+
+<p>Il est la</p>
+<div class="top">
+    <div class="row">
+        {% for voitures in voiture %}
+        <div class="col-md-3 carte" >
+            <div class="card">
+                    <div class="style-dance">                       
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="card-title"> {{ voitures.titre }} </h2>
+                        
+                        <img src="{{ voitures.photo.url }}" class="photo" alt="{ loca.photo.url }}">
+                        <hr>
+                        <p class="card-text">Kilometrage : {{ voitures.kilometrage  }} km</p>
+                        <p class="card-adresse ">Couleur : {{voitures.couleur }} </p>
+                        <p class="card-adresse">Marque : {{ voitures.marque }}</p> 
+                        <p class="card-adresse">Modele : {{ voitures.modele }}</p> 
+                        <p class="card-adresse">Prix : {{ voitures.prix }} Euros</p>  
+                        <p class="card-text">Année : {{ voitures.année }}</p>
+                        <p><button class="btn btn-primary" hx-target="#page"  hx-push-url="true" hx-post="{% url 'modifier_annonce' voitures.pk %}"> Modifier</button>
+                        <button class="btn btn-primary" hx-target="#page"  hx-push-url="true" hx-delete="{% url 'delete' voitures.pk %}"> Supprimer</button></p>
+                    </div>
+            </div>            
+        </div>
+{% endfor %}
+
+{% endblock content %}
+
+{% block javascript %}{% endblock javascript %}
