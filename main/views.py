@@ -55,7 +55,7 @@ def annonce(request):
         form = AnnonceForm(request.POST, request.FILES)    
         if form.is_valid():
             form.save()            
-            return redirect('index')
+            return redirect('catalogue2')
         else:
             print(form.errors)            
             form = AnnonceForm()    

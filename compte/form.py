@@ -43,9 +43,4 @@ class Livre_dorForm(forms.ModelForm):
         model = Livre_dor
         fields = '__all__'
         
-class factureForm(forms.ModelForm):
-    class Meta:
-        model = Facture
-        fields = '__all__'
-
 

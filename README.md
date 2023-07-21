@@ -36,6 +36,8 @@ Pour plus d'information sur le script manage, consulter la documentation officie
 ### Remarques !
 Les identifiants utilisateurs pour l'espace d'administration sont : Vincent/Parrot
 
+La charte graphique est dans le Trello du projet.
+
 Le projet n'est pas terminé, il ne délivre pas pour l'instant les fonctionnalités suivantes :
 Filtre, contact direct sous les annonces et livre d'avis.
 Note : la fonction de modification n'est pas terminée.
