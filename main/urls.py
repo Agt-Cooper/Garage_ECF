@@ -16,6 +16,6 @@ urlpatterns = [
     path('annonce', annonce, name='annonce'),
     path('annonce/update/<int:pk>', update_annonce, name='modifier_annonce'),
     path('annonce/delete/<int:pk>', delete_annonce, name='delete'),
-
+    path('cherche_voiture/',cherche_voiture, name="cherche-voiture")
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

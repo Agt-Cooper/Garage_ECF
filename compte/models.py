@@ -28,7 +28,7 @@ permi = [
     ('Administrateur', 'Administrateur'),
 
 ]
-typee = [
+type = [
     ('Berline', 'berline'),
     ('Coupée', 'Coupée'),
     ('Hayon', 'Hayon'),
@@ -39,6 +39,7 @@ typee = [
     ('Cabriolets','Cabriolets'),
     ('Roadsters','Roadsters'),
     ('Targa', 'Targa'),
+    ('citadine','citadine')
 ]
 couleur = [
     ('Rouge', 'Rouge'),
@@ -93,7 +94,7 @@ class Voiture(models.Model):
     marque = models.ForeignKey('compte.Marque', on_delete=models.SET_NULL, max_length=20, null=True, blank=True)
     modele = models.ForeignKey('compte.Modele', on_delete=models.SET_NULL, max_length=20, null=True, blank=True)
     couleur = models.CharField(choices=couleur, max_length=20)
-    typee = models.CharField(choices=typee, max_length=20) 
+    typee = models.CharField(choices=type, max_length=20) 
     carburant = models.CharField(choices=carburant,max_length=50)
 
     def __str__(self):

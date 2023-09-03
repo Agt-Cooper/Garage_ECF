@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from compte.form import *
 from compte.models import *
+from django.db.models import Q
 
 
 
@@ -86,6 +87,18 @@ def delete_annonce(request, pk):
         'voiture' : voiture,
     }
     return render(request,'catalogue2.html', context)
+
+def cherche_voiture(request):
+    cherche = request.POST.get('cherche')
+    voitures = Voiture.objects.filter(Q(kilometrage__icontains=cherche)|
+                                       Q(prix__icontains=cherche) |
+                                       Q(année__icontains=cherche)|
+                                       Q(titre__icontains=cherche))
+                                    #    Q(modele__icontains=cherche))
+    context = {
+        'voiture' : voitures
+    }
+    return render(request,'catalogue.html', context)
 
     
 

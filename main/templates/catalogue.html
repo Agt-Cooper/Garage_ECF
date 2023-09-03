@@ -8,9 +8,14 @@
 {% block title %}Catalogue{% endblock title %}
 
 {% block content %}
-
-<p>Il est la</p>
 <div class="top">
+<div class="row">            
+    <form method="post" class="d-flex recherche">            
+        <input class=" me-2" name="cherche" placeholder=" Recherche voiture">
+        <button class="btn btnr btn-outline-dark" hx-swap="outerHTML" hx-target="#page"  hx-post="{% url 'cherche-voiture' %}" type="submit">Recherche</button>
+    </form> 
+</div>
+<hr>
     <div class="row">
         {% for voitures in voiture %}
         <div class="col-md-3 carte" >
