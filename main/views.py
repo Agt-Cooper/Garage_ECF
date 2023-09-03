@@ -7,7 +7,11 @@ from django.db.models import Q
 
 
 def index(request):
-    context={'navbar': 'index'}
+    avis = Livre_dor.objects.all() 
+    print(avis)
+    context={
+        'avis' : avis,
+        'navbar': 'index'}
     return render(request, 'index.html',context)
 
 def catalogue(request):   
@@ -52,7 +56,6 @@ def logout_user(request):
 def annonce(request):
     form = AnnonceForm()   
     if request.method == "POST":
-        print(request.POST)
         form = AnnonceForm(request.POST, request.FILES)    
         if form.is_valid():
             form.save()            
@@ -102,3 +105,17 @@ def cherche_voiture(request):
 
     
 
+def livre(request):
+    form = Livre_dorForm
+    if request.method == "POST":
+        form = Livre_dorForm(request.POST, request.FILES)    
+        if form.is_valid():
+            form.save()            
+            return redirect('catalogue2')
+        else:
+            print(form.errors)            
+            form = Livre_dorForm()    
+    context={'navbar': 'annonce',
+             'form' : form,              
+             }
+    return render(request, 'livre.html', context)

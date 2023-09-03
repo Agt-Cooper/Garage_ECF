@@ -41,6 +41,13 @@ class AnnonceForm(forms.ModelForm):
 class Livre_dorForm(forms.ModelForm):
     class Meta:
         model = Livre_dor
-        fields = '__all__'
-        
-
+        fields = ['nom','prenom','commentaire','note']
+        widgets = {
+            'commentaire' : forms.Textarea(
+                attrs={
+                    'placeholder':"Vous pouvez rentrer jusqu'à 70 caractères.",
+                    'rows' : 5,
+                    'cols' : 35,
+                }
+            ),          
+        }

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'annonce.css' %}"> 
+{% endblock head %}
+
+{% block title %}Index{% endblock title %}
+
+{% block content %}
+<div class="top" enctype="multipart/form-data" hx-encoding="multipart/form-data">
+    <form method="POST">        
+        {% csrf_token %}                
+            {{ form.as_p }}
+        <p><button class="btn btn-dark" type="submit"> Ajouter</button></p>  
+    </form>     
+</div>
+{% endblock content %}
+
+{% block javascript %}{% endblock javascript %}

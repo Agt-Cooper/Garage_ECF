@@ -141,6 +141,7 @@ class Livre_dor(models.Model):
     prenom = models.CharField(max_length=50)
     commentaire = models.CharField(max_length=500)
     note = models.IntegerField()
+    verifier = models.BooleanField(default=False)
 
     def __str__(self):
         return self.nom  

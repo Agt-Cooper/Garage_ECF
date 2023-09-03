@@ -26,7 +26,8 @@
                     {% if user.is_authenticated %}
                     
                     <li class="nav-item"><a class="nav-link me-0 me-lg-5 {% if navbar == 'annonce' %} active {% endif %}" hx-target="#page" hx-push-url="true" hx-get="{% url 'annonce' %}">Créer une annonce</a></li>
-                    <li class="nav-item"><a class="nav-link me-0 me-lg-5 {% if navbar == 'catalogue' %} active {% endif %}" hx-target="#page" hx-push-url="true" hx-get="{% url 'catalogue2' %}">Catalogue</a></li>                   
+                    <li class="nav-item"><a class="nav-link me-0 me-lg-5 {% if navbar == 'catalogue' %} active {% endif %}" hx-target="#page" hx-push-url="true" hx-get="{% url 'catalogue2' %}">Catalogue</a></li> 
+                    <li class="nav-item"><a class="nav-link me-0 me-lg-5 {% if navbar == 'annonce' %} active {% endif %}" hx-target="#page" hx-push-url="true" hx-get="{% url 'livre' %}">Livre d'or</a></li>                  
                     <li class="nav-item"><a class="nav-link me-0 me-lg-5 {% if navbar == 'logout' %} active {% endif %}" hx-target="#page" hx-push-url="true" hx-get="{% url 'logout' %}">Déconnexion</a></li>
                     {% else %} 
                     <li class="nav-item"><a class="nav-link me-0 me-lg-5 {% if navbar == 'catalogue' %} active {% endif %}" hx-target="#page" hx-push-url="true" hx-get="{% url 'catalogue' %}">Catalogue</a></li>                                         
