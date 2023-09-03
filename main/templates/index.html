@@ -24,15 +24,13 @@
     <p>sam.: 08h45 - 12h00</p>
     <p>dim.: Fermé</p>
 </div>
-
-    
-            {% for avis in avis %}
-                   <hr>
-                        <p> Nom : {{ avis.nom }}</p>
-                        <p> note : {{ avis.note }} / 5</p>
-                        <p> Commentaire: {{ avis.commentaire }}</p>
-                  <hr>
-            {% endfor %}
+    {% for avis in avis %}
+    <hr>
+        <p> Nom : {{ avis.nom }}</p>
+        <p> note : {{ avis.note }} / 5</p>
+        <p> Commentaire: {{ avis.commentaire }}</p>           
+    <hr>
+    {% endfor %}
 
 
 {% endblock content %}
