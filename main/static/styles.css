@@ -33,8 +33,8 @@ a.navbar-brand{
 .dropdown-menu .dropdown-item:hover,
 .navbar .nav-item .nav-link.active,
 .dropdown .dropdown-menu .dropdown-item.active::after{
- text-decoration: underline #ce1919;
- bottom: -10px;
+  text-decoration: underline #ce1919;
+  bottom: -10px;
 }
 
 .navbar button {

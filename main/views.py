@@ -17,15 +17,15 @@ def index(request):
 def catalogue(request):   
     voiture = Voiture.objects.all() 
     context={'navbar': 'catalogue',
-             'voiture' : voiture,
-             }
+            'voiture' : voiture,
+            }
     return render(request, 'catalogue.html',context)
 
 def catalogue2(request):   
     voiture = Voiture.objects.all() 
     context={'navbar': 'catalogue',
-             'voiture' : voiture,
-             }
+            'voiture' : voiture,
+            }
     return render(request, 'catalogue2.html',context)
 
 
@@ -41,8 +41,8 @@ def contact(request):
             print(form.errors)            
             form = ContactForm()    
     context={'navbar': 'contact',
-             'form' : form,             
-             }    
+            'form' : form,             
+            }    
     return render(request, 'contact.html',context)
 
 def login(request):
@@ -64,8 +64,8 @@ def annonce(request):
             print(form.errors)            
             form = AnnonceForm()    
     context={'navbar': 'annonce',
-             'form' : form,              
-             }
+            'form' : form,              
+            }
     return render(request, 'annonce.html', context)
 
 def update_annonce(request, pk):
@@ -78,8 +78,8 @@ def update_annonce(request, pk):
             form.save()            
             return redirect('index')         
     context={'navbar': 'annonce',
-             'form' : form,                          
-             }
+            'form' : form,                          
+            }
     return render(request, 'annonce2.html', context)
 
 def delete_annonce(request, pk):   
@@ -94,9 +94,9 @@ def delete_annonce(request, pk):
 def cherche_voiture(request):
     cherche = request.POST.get('cherche')
     voitures = Voiture.objects.filter(Q(kilometrage__icontains=cherche)|
-                                       Q(prix__icontains=cherche) |
-                                       Q(année__icontains=cherche)|
-                                       Q(titre__icontains=cherche))
+                                    Q(prix__icontains=cherche) |
+                                    Q(année__icontains=cherche)|
+                                    Q(titre__icontains=cherche))
                                     #    Q(modele__icontains=cherche))
     context = {
         'voiture' : voitures
@@ -116,6 +116,6 @@ def livre(request):
             print(form.errors)            
             form = Livre_dorForm()    
     context={'navbar': 'annonce',
-             'form' : form,              
-             }
+            'form' : form,              
+            }
     return render(request, 'livre.html', context)
