@@ -12,7 +12,7 @@ Ouvrez le terminal à la racine du projet et créer l'environnement virtuel ;
 
 ```
 python -m venv .env
-source .env/bin/activate
+.env\Scripts\activate.ps1
 ```
 
 Note: Le script activate à exécuter peut différer selon votre shell.
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ### Lancer le site web
 ```
-./manage.py runserver
+py manage.py runserver
 ```
 Le site web est accessible à l'adresse https://docs.python.org/3/library/venv.html.
 
